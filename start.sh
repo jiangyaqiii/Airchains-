@@ -45,6 +45,9 @@ function check_go_installation() {
     fi
 }
 # 节点安装功能
+mkdir airchains
+cd airchains
+
 install_nodejs_and_npm
 install_pm2
 
@@ -97,4 +100,5 @@ mv $HOME/.junction/priv_validator_state.json.backup $HOME/.junction/data/priv_va
 # 使用 PM2 启动节点进程
 pm2 restart junctiond
 echo '====================== 安装完成,请退出脚本后执行 source $HOME/.bash_profile 以加载环境变量==========================='
-
+kill -INT $$
+source $HOME/.bash_profile
