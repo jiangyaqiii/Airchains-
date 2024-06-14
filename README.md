@@ -8,4 +8,8 @@ wget -O start.sh https://raw.githubusercontent.com/jiangyaqiii/Airchains-/main/s
 
 生成钱包
 
-wget -O generate_wallet.sh https://raw.githubusercontent.com/jiangyaqiii/Airchains-/main/generate_wallet.sh && chmod +x generate_wallet.sh && ./generate_wallet.sh
+curl -s https://raw.githubusercontent.com/jiangyaqiii/Airchains-/main/add_wallet.sh |bash
+
+查看同步状态
+
+curl -s https://raw.githubusercontent.com/jiangyaqiii/Airchains-/main/status.sh |bash
