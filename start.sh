@@ -6,6 +6,8 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
+echo "\$nrconf{kernelhints} = 0;" >> /etc/needrestart/needrestart.conf
+echo "\$nrconf{restart} = 'l';" >> /etc/needrestart/needrestart.conf
 wget https://github.com/ignite/cli/releases/download/v0.27.1/ignite_0.27.1_linux_amd64.tar.gz
 chmod +x ignite_0.27.1_linux_amd64.tar.gz
 tar -xvf ignite_0.27.1_linux_amd64.tar.gz
